@@ -1,0 +1,6 @@
+{
+    "module": "SAMBA.Device.SAMD51",
+	"module_version": "3.2",
+    "classname": "SAMD51Labyrinth",
+	"type": "board"
+}

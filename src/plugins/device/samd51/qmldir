@@ -1,0 +1,6 @@
+module SAMBA.Device.SAMD51
+BootCfg 3.2 samd51-bootcfg.js
+SAMD51Labyrinth 3.2 SAMD51Labyrinth.qml
+SAMD51 3.2 SAMD51.qml
+SAMD51BootConfigApplet 3.2 SAMD51BootConfigApplet.qml
+SAMD51Config 3.2 SAMD51Config.qml

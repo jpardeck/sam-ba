@@ -1,0 +1,8 @@
+/*!
+\qmlmodule SAMBA.Device.SAMD51 3.2
+\title SAMBA.Device.SAMD51 Module
+
+The SAMBA.Device.SAMD51 module contains an implementation of the
+SAMBA::Device type for the SAMD51 devices.
+device.
+*/
