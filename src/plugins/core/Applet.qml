@@ -693,7 +693,11 @@ Item {
 				while (pagesToWrite > 0) {
 					var count = Math.min(pagesToWrite, bufferPages)
 
-					var pagesWritten = callWritePages(offset, data.slice(0, count * pageSize))
+                    if (count * pageSize < data.byteLength) {
+                        data = data.slice(0, count * pageSize)
+                    }
+
+                    var pagesWritten = callWritePages(offset, data)
 					if (pagesWritten < count)
 						count = pagesWritten
 

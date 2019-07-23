@@ -12,13 +12,13 @@
  */
 
 import QtQuick 2.3
-import SAMBA.Device.SAMV71 3.2
+import SAMBA.Device.SAMD51 3.2
 
 /*!
-	\qmltype SAME70Xplained
-	\inqmlmodule SAMBA.Device.SAMV71
-	\brief Contains a specialization of the SAMV71 QML type for the
-	       SAME70 Xplained board.
+    \qmltype SAMD51Labyrinth
+    \inqmlmodule SAMBA.Device.SAMD51
+    \brief Contains a specialization of the SAMD51 QML type for the
+           SAMD51 Labyrinth board.
 */
 SAMD51 {
     name: "samd51-labyrinth"

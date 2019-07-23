@@ -13,7 +13,7 @@
 
 import SAMBA 3.2
 import SAMBA.Applet 3.2
-import SAMBA.Device.SAMV71 3.2
+import SAMBA.Device.SAMD51 3.2
 
 /*!
 	\qmltype SAMV71
@@ -70,8 +70,7 @@ import SAMBA.Device.SAMV71 3.2
 
 	\table
 	\header \li Command-Line Name \li QML Name        \li Board Name
-	\row    \li same70-xplained  \li SAME70Xplained   \li SAME70 Xplained
-	\row    \li samv71-xplained  \li SAMV71Xplained   \li SAMV71 Xplained Ultra
+    \row    \li samd51-labyrinth  \li SAMVD51Labyrinth \li SAMD51 Labyrinth
 	\endtable
 
 	\section2 Custom configuration

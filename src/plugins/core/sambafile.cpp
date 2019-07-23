@@ -14,6 +14,8 @@
 #include "sambacore.h"
 #include "sambafile.h"
 #include <QUrl>
+#include <QCoreApplication>
+#include <QFileInfo>
 
 SambaFile::SambaFile(QObject* parent)
 	: QObject(parent)
@@ -23,8 +25,20 @@ SambaFile::SambaFile(QObject* parent)
 SambaFileInstance* SambaFile::open(const QString& pathOrUrl, bool write)
 {
 	SambaFileInstance* file = new SambaFileInstance(this);
+    QString path = QCoreApplication::applicationDirPath();
+    QUrl url(pathOrUrl);
+    QFileInfo info(pathOrUrl);
 
-	if (!file->open(pathOrUrl, write)) {
+    if (!url.isLocalFile() && !info.isAbsolute())
+    {
+        path = path + "/" + pathOrUrl;
+    }
+    else
+    {
+        path = pathOrUrl;
+    }
+
+    if (!file->open(path, write)) {
 		qCDebug(sambaLogCore, "Error: Could not open file '%s' for %s",
 		        pathOrUrl.toLocal8Bit().constData(),
 		        write ? "writing" : "reading");
