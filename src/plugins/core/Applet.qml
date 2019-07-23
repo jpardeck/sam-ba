@@ -464,10 +464,14 @@ Item {
 					var readOffset = offset - firstPage * pageSize
 					var readLength = Math.min(remaining, count * pageSize - readOffset)
 
+                    if (readLength > readOffset + readLength) {
+                        result = result.slice(readOffset, readOffset + readLength)
+                    }
+
 					/* write data to output file */
-					var written = file.write(result.slice(readOffset, readOffset + readLength))
-					if (written != readLength)
-						throw new Error("Could not write to file '" + fileName + "'")
+                    var written = file.write(result)
+                    if (written != readLength)
+                        throw new Error("Could not write to file '" + fileName + "'")
 
 					/* update progression percentage and display it */
 					var percent = 100 * (1 - ((remaining - readLength) / size))
