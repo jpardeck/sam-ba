@@ -155,6 +155,10 @@ void SambaConnectionSerialHelper::open(qint32 maxChunkSize)
 
 	if (m_serial.open(QIODevice::ReadWrite))
 	{
+        // Jump to bootloader
+        writeSerial(QString("AT+EB\r\n"));
+        readSerial(255);
+
 		// resync in case some data was already sent to monitor:
 		// send a single '#' and ignore response
 		writeSerial(QString("#"));

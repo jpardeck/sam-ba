@@ -9,7 +9,8 @@ DEVICE_FILES *= \
     SAMD51Config.qml \
     SAMD51Labyrinth.qml \
     samd51-bootcfg.js \
-    applets/applet-test.bin
+    applets/flash.bin \
+    applets/reset.bin
 
 include(../device.pri)
 

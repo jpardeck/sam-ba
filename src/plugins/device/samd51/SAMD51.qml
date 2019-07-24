@@ -130,15 +130,13 @@ Device {
 		},
         */
 		InternalFlashApplet {
-            //codeUrl: Qt.resolvedUrl("applets/applet-internalflash_samv71-generic_sram.bin")
-            codeUrl: Qt.resolvedUrl("applets/applet-test.bin")
+            codeUrl: Qt.resolvedUrl("applets/flash.bin")
             codeAddr: 0x20001000
             mailboxAddr: 0x20001040
             entryAddr: 0x20001000
 		},
 		ResetApplet {
-            //codeUrl: Qt.resolvedUrl("applets/applet-reset_samv71-generic_sram.bin")
-            codeUrl: Qt.resolvedUrl("applets/applet-test.bin")
+            codeUrl: Qt.resolvedUrl("applets/reset.bin")
             codeAddr: 0x20001000
             mailboxAddr: 0x20001040
             entryAddr: 0x20001000
